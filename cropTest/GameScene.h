@@ -10,4 +10,6 @@
 
 @interface GameScene : SKScene
 
+@property (nonatomic) BOOL cropped;
+
 @end

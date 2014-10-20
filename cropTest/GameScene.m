@@ -21,6 +21,7 @@
 //    
 //    [self addChild:myLabel];
 //
+    self.cropped = NO;
     
 
 }
@@ -65,12 +66,16 @@
     [cropNode setMaskNode:mask];
     [self addChild:cropNode];
     
-    SKAction *resizeY = [SKAction resizeToHeight:pic.size.height*2 duration:1.0];
+    SKAction *resizeY = [SKAction resizeToHeight:pic.size.height*2 duration:0.5];
     [mask runAction:resizeY];
+            self.cropped = YES;
 }
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    if(self.cropped){
+        [self removeAllChildren];
+    }
         [self cropNodes];
 }
 

@@ -10,12 +10,12 @@
 		8014D7FB19F1BAE500C65864 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8014D7FA19F1BAE500C65864 /* main.m */; };
 		8014D7FE19F1BAE500C65864 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8014D7FD19F1BAE500C65864 /* AppDelegate.m */; };
 		8014D80119F1BAE500C65864 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8014D80019F1BAE500C65864 /* GameScene.m */; };
-		8014D80319F1BAE500C65864 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8014D80219F1BAE500C65864 /* GameScene.sks */; };
 		8014D80619F1BAE500C65864 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8014D80519F1BAE500C65864 /* GameViewController.m */; };
 		8014D80919F1BAE500C65864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8014D80719F1BAE500C65864 /* Main.storyboard */; };
 		8014D80B19F1BAE500C65864 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8014D80A19F1BAE500C65864 /* Images.xcassets */; };
 		8014D80E19F1BAE500C65864 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8014D80C19F1BAE500C65864 /* LaunchScreen.xib */; };
 		8014D81A19F1BAE500C65864 /* cropTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8014D81919F1BAE500C65864 /* cropTestTests.m */; };
+		8014D82419F1C1C400C65864 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 8014D82319F1C1C400C65864 /* Spaceship.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 		8014D7FD19F1BAE500C65864 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8014D7FF19F1BAE500C65864 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		8014D80019F1BAE500C65864 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		8014D80219F1BAE500C65864 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		8014D80419F1BAE500C65864 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		8014D80519F1BAE500C65864 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		8014D80819F1BAE500C65864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +44,7 @@
 		8014D81319F1BAE500C65864 /* cropTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cropTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8014D81819F1BAE500C65864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8014D81919F1BAE500C65864 /* cropTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cropTestTests.m; sourceTree = "<group>"; };
+		8014D82319F1C1C400C65864 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Spaceship.png; path = Images.xcassets/Spaceship.imageset/Spaceship.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +90,12 @@
 				8014D7FD19F1BAE500C65864 /* AppDelegate.m */,
 				8014D7FF19F1BAE500C65864 /* GameScene.h */,
 				8014D80019F1BAE500C65864 /* GameScene.m */,
-				8014D80219F1BAE500C65864 /* GameScene.sks */,
 				8014D80419F1BAE500C65864 /* GameViewController.h */,
 				8014D80519F1BAE500C65864 /* GameViewController.m */,
 				8014D80719F1BAE500C65864 /* Main.storyboard */,
 				8014D80A19F1BAE500C65864 /* Images.xcassets */,
 				8014D80C19F1BAE500C65864 /* LaunchScreen.xib */,
+				8014D82319F1C1C400C65864 /* Spaceship.png */,
 				8014D7F819F1BAE500C65864 /* Supporting Files */,
 			);
 			path = cropTest;
@@ -207,9 +207,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8014D82419F1C1C400C65864 /* Spaceship.png in Resources */,
 				8014D80E19F1BAE500C65864 /* LaunchScreen.xib in Resources */,
 				8014D80B19F1BAE500C65864 /* Images.xcassets in Resources */,
-				8014D80319F1BAE500C65864 /* GameScene.sks in Resources */,
 				8014D80919F1BAE500C65864 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

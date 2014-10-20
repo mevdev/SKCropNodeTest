@@ -12,34 +12,66 @@
 
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
-    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+//    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+//    
+//    myLabel.text = @"Hello, World!";
+//    myLabel.fontSize = 65;
+//    myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
+//                                   CGRectGetMidY(self.frame));
+//    
+//    [self addChild:myLabel];
+//
     
-    myLabel.text = @"Hello, World!";
-    myLabel.fontSize = 65;
-    myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                   CGRectGetMidY(self.frame));
-    
-    [self addChild:myLabel];
+
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
+
+
+- (void) cropNodes
+{
+    //crop from bottom up.
+    //
+    //
+    //
+    //    ------       ↓
+    //                 ↓
+    //                 ↓
+    //   |      |
+    //    ------
+    //
+    //
+    //   |      |
+    //   |      |
+    //    ------
+    //
+    //
+    //    ______
+    //   |      |
+    //   |      |
+    //   L------
     
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.xScale = 0.5;
-        sprite.yScale = 0.5;
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
-    }
+    // the part I want to run action on
+    SKSpriteNode *pic = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
+    pic.name = @"PictureNode";
+    pic.position = CGPointMake(0,pic.size.height/2);
+    CGFloat properWidth = pic.size.width;
+
+    SKSpriteNode *mask = [SKSpriteNode spriteNodeWithColor:[SKColor blackColor] size:CGSizeMake(properWidth, 0)];
+
+    SKCropNode *cropNode = [SKCropNode node];
+
+    cropNode.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/4);
+    [cropNode addChild:pic];
+    [cropNode setMaskNode:mask];
+    [self addChild:cropNode];
+    
+    SKAction *resizeY = [SKAction resizeToHeight:pic.size.height*2 duration:1.0];
+    [mask runAction:resizeY];
+}
+
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+        [self cropNodes];
 }
 
 -(void)update:(CFTimeInterval)currentTime {
